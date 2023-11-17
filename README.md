@@ -22,13 +22,6 @@ The module supports the following operations:
 - Creates a new arbitrary secret in the secret group with the generated ServiceID apikey value (NOTE: This ServiceID apikey secret is stored as an arbitrary secret, meaning the IAM engine will not dynamically create the key or manage rotation of it)
 - Configures the secret manager instance with the IAM engine using the ServiceID apikey
 
-## Compliance and security
-This module implements the following NIST controls on the network layer. For more information about how this module implements the controls in the following list, see [NIST controls](docs/controls.md).
-
-|Profile|Category|ID|Description|
-|---|---|---|---|
-|NIST|IA-5|IA-5(g)| Protecting authenticator content from unauthorized disclosure and modification.|
-
 <!-- Below content is automatically populated via pre-commit hook -->
 <!-- BEGIN OVERVIEW HOOK -->
 ## Overview
