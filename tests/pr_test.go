@@ -1,4 +1,4 @@
-// Tests in this file are run in the PR pipeline and the continuous testing pipeline
+// Tests in this file are run in the PR pipeline
 package test
 
 import (
@@ -9,23 +9,18 @@ import (
 )
 
 // Use existing resource group
-const resourceGroup = "geretain-test-resources"
-const completeExampleDir = "examples/complete"
+const resourceGroup = "geretain-test-sm-iam-eng"
+const defaultExampleTerraformDir = "examples/default"
 
-func setupOptions(t *testing.T, prefix string, dir string) *testhelper.TestOptions {
-	options := testhelper.TestOptionsDefaultWithVars(&testhelper.TestOptions{
-		Testing:       t,
-		TerraformDir:  dir,
-		Prefix:        prefix,
-		ResourceGroup: resourceGroup,
-	})
-	return options
-}
-
-func TestRunCompleteExample(t *testing.T) {
+func TestRunDefaultExample(t *testing.T) {
 	t.Parallel()
 
-	options := setupOptions(t, "mod-template", completeExampleDir)
+	options := testhelper.TestOptionsDefaultWithVars(&testhelper.TestOptions{
+		Testing:       t,
+		TerraformDir:  defaultExampleTerraformDir,
+		Prefix:        "sm-iam-eng",
+		ResourceGroup: resourceGroup,
+	})
 
 	output, err := options.RunTestConsistency()
 	assert.Nil(t, err, "This should not have errored")
@@ -35,7 +30,12 @@ func TestRunCompleteExample(t *testing.T) {
 func TestRunUpgradeExample(t *testing.T) {
 	t.Parallel()
 
-	options := setupOptions(t, "mod-template-upg", completeExampleDir)
+	options := testhelper.TestOptionsDefaultWithVars(&testhelper.TestOptions{
+		Testing:       t,
+		TerraformDir:  defaultExampleTerraformDir,
+		Prefix:        "sm-iam-eng-upg",
+		ResourceGroup: resourceGroup,
+	})
 
 	output, err := options.RunTestUpgrade()
 	if !options.UpgradeTestSkipped {
