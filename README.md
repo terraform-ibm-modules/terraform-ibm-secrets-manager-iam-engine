@@ -11,7 +11,6 @@ This module configures an [IAM secrets engine](https://cloud.ibm.com/docs/secret
 
 The module supports the following operations:
 
-- Optionally assigning a given user a Secrets Manager "Manager" role (disabled by default - not recommended for production - users should be assigned roles using access groups instead of direct role access)."
 - Creates a new Service ID
 - Assigns the new Service ID "Editor" role access for "iam-groups"
 - Assigns the new Service ID "Operator" role access for "iam-identity". If user set the input variable add_service_id_creator_role to true, this module will also add "Service ID creator" role access for "iam-identity". It is recommended to set it true if the service ID creation is disabled in the IAM settings.
