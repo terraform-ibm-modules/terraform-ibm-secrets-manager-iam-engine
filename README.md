@@ -25,7 +25,7 @@ The module supports the following operations:
 ## Overview
 * [terraform-ibm-secrets-manager-iam-engine](#terraform-ibm-secrets-manager-iam-engine)
 * [Examples](./examples)
-    * [Secret Manager and IAM Secrets Engine setup](./examples/default)
+    * [Default example](./examples/default)
 * [Contributing](#contributing)
 <!-- END OVERVIEW HOOK -->
 
@@ -43,8 +43,8 @@ module "iam_secrets_engine" {
   version                              = "X.X.X"  # Replace "X.X.X" with a release version to lock into a specific release
   resource_group_id                    = "xxXXxxXXxXxXXXXxxXxxxXXXXxXXXXX"
   region                               = "us-south"
-  iam_engine_name      = "iam-engine"
-  secrets_manager_guid = "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
+  iam_engine_name                      = "iam-engine"
+  secrets_manager_guid                 = "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
 }
 ```
 

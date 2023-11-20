@@ -1,0 +1,66 @@
+{
+  "products": [
+    {
+      "name": "terraform-ibm-secrets-manager-iam-engine",
+      "label": "IAM secrets engine module",
+      "product_kind": "module",
+      "tags": [
+        "dev_ops",
+        "target_terraform",
+        "terraform",
+        "module"
+      ],
+      "keywords": [
+        "terraform",
+        "iam",
+        "secrets",
+        "encryption"
+      ],
+      "short_description": "This module configures an IAM secrets engine for an existing secrets manager instance.",
+      "long_description": "Use this module to configure an IAM secrets engine for an existing secrets manager instance.\n#### Usage\n```hcl\nmodule \"iam_secrets_engine\" {\n  source                               = \"terraform-ibm-modules/terraform-ibm-secrets-manager-iam-engine/ibm\"\n  version                              = \"X.X.X\"  # Replace \"X.X.X\" with a release version to lock into a specific release\n  resource_group_id                    = \"xxXXxxXXxXxXXXXxxXxxxXXXXxXXXXX\"\n  region                               = \"us-south\"\n  iam_engine_name                      = \"iam-engine\"\n  secrets_manager_guid                 = \"XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX\"\n}\n```",
+      "offering_docs_url": "https://github.com/terraform-ibm-modules/terraform-ibm-secrets-manager-iam-engine/blob/main/README.md",
+      "offering_icon_url": "https://raw.githubusercontent.com/terraform-ibm-modules/terraform-ibm-secrets-manager-iam-engine/main/images/sm_icon.svg",
+      "features": [
+        {
+          "title": "Creates a new ServiceID and assigns role access",
+          "description": "Creates a new ServiceID. Assigns `Editor` role access for `iam-groups`. Assigns `Operator` role access for `iam-identity`. "
+        },
+        {
+          "title": "Creates a new apikey",
+          "description": "Creates a new apikey for the ServiceID."
+        },
+        {
+          "title": "Option to create a secret group",
+          "description": "Option to create a new secret group. Also, provisions to pass an existing secret group."
+        },
+        {
+          "title": "Creates a new arbitrary secret",
+          "description": "Creates a new arbitrary secret in the secret group with the generated ServiceID apikey value."
+        },
+        {
+          "title": "Creates an IAM engine",
+          "description": "Configures the secret manager instance with the IAM engine using the ServiceID apikey."
+        }
+      ],
+      "flavors": [
+        {
+          "label": "Default",
+          "name": "default",
+          "working_directory": "examples/default",
+          "architecture": {
+            "diagrams": [
+              {
+                "diagram": {
+                  "caption": "Default example",
+                  "url": "https://raw.githubusercontent.com/terraform-ibm-modules/documentation/main/icons/ModuleExampleDiagram.svg",
+                  "type": "image/svg+xml"
+                },
+                "description": "A simple example to set up a secret manager instance and configure IAM secrets engine in that instance."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
