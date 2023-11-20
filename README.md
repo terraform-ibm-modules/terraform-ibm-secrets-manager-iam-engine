@@ -1,5 +1,5 @@
 
-# Terraform-ibm-secrets-manager-iam-engine
+# Secrets Manager IAM engine module
 
 [![Incubating (Not yet consumable)](https://img.shields.io/badge/status-Incubating%20(Not%20yet%20consumable)-red)](https://terraform-ibm-modules.github.io/documentation/#/badge-status)
 [![latest release](https://img.shields.io/github/v/release/terraform-ibm-modules/terraform-ibm-secrets-manager-iam-engine?logo=GitHub&sort=semver)](https://github.com/terraform-ibm-modules/terraform-ibm-secrets-manager-iam-engine/releases/latest)
@@ -8,8 +8,6 @@
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 This module configures an [IAM secrets engine](https://cloud.ibm.com/docs/secrets-manager?topic=secrets-manager-configure-iam-engine) for an existing Secrets Manager instance.
-
-:information_source: **Tip:** The [Secret Manager module](https://github.ibm.com/GoldenEye/secrets-manager-module) provides automation to create a Secret Manager instance.
 
 The module supports the following operations:
 
@@ -41,7 +39,6 @@ provider "ibm" {
   region               = "us-south"
 }
 module "iam_secrets_engine" {
-  # Replace "master" with a GIT release version to lock into a specific release
   source                               = "terraform-ibm-modules/terraform-ibm-secrets-manager-iam-engine/ibm"
   version                              = "X.X.X"  # Replace "X.X.X" with a release version to lock into a specific release
   resource_group_id                    = "xxXXxxXXxXxXXXXxxXxxxXXXXxXXXXX"
