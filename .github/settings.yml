@@ -15,14 +15,14 @@ repository:
   # By changing this field, you rename the repository.
 
   # Uncomment this name property and set the name to the current repo name.
-  # name: ""
+  name: "terraform-ibm-secrets-manager-iam-engine"
 
   # The description is displayed under the repository name on the
   # organization page and in the 'About' section of the repository.
 
   # Uncomment this description property
   # and update the description to the current repo description.
-  # description: ""
+  description: "This module configures an IAM secrets engine for an existing Secrets Manager instance."
 
   # Use a comma-separated list of topics to set on the repo.
-  topics: terraform, ibm-cloud, terraform-module
+  topics: core-team, terraform, ibm-cloud, terraform-module, secrets-manager, iam-secret-engine, supported, graduated
