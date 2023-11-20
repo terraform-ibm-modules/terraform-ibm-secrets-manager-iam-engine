@@ -11,12 +11,12 @@ This module configures an [IAM secrets engine](https://cloud.ibm.com/docs/secret
 
 The module supports the following operations:
 
-- Creates a new Service ID
-- Assigns the new Service ID "Editor" role access for "iam-groups"
-- Assigns the new Service ID "Operator" role access for "iam-identity". If user set the input variable add_service_id_creator_role to true, this module will also add "Service ID creator" role access for "iam-identity". It is recommended to set it true if the service ID creation is disabled in the IAM settings.
-- Creates a new API key for the Service ID
-- Optionally creates a new Secret Group (an existing group can be pass in otherwise)
-- Creates a new arbitrary secret in the Secret Group with the generated Service ID API key value (NOTE: This Service ID API key secret is stored as an arbitrary secret, meaning the IAM engine will not dynamically create the key or manage rotation of it)
+- Creates a new Service ID.
+- Assigns the new Service ID "Editor" role access for `iam-groups`.
+- Assigns the new Service ID "Operator" role access for `iam-identity`. If user set the input variable add_service_id_creator_role to true, this module will also add "Service ID creator" role access for `iam-identity`. It is recommended to set it true if the service ID creation is disabled in the IAM settings.
+- Creates a new API key for the Service ID.
+- Optionally creates a secrets group, if an existing one is not passed in.
+- Creates a new arbitrary secret in the Secret Group with the generated Service ID API key value. Because it is an arbitrary secret, the IAM engine does not create the key or manage its rotation.
 - Configures the Secret Manager instance with the IAM credentials engine using the Service ID API key.
 
 <!-- Below content is automatically populated via pre-commit hook -->
