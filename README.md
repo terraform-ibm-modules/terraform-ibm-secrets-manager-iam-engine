@@ -11,21 +11,21 @@ This module configures an [IAM secrets engine](https://cloud.ibm.com/docs/secret
 
 The module supports the following operations:
 
-- Optionally assigning a given user a secrets-manager "Manager" role (disabled by default - not recommended for production - users should be assigned roles using access groups instead of direct role access)."
-- Creates a new ServiceID
-- Assigns the new ServiceID "Editor" role access for "iam-groups"
-- Assigns the new ServiceID "Operator" role access for "iam-identity". If user set the input variable `add_service_id_creator_role` to `true`, this module will also add "Service ID creator" role access for "iam-identity". It is recommended to set it true if the service id creation is disabled in the iam settings.
-- Creates a new apikey for the ServiceID
-- Optionally creates a new secret group (an existing group can be pass in otherwise)
-- Creates a new arbitrary secret in the secret group with the generated ServiceID apikey value (NOTE: This ServiceID apikey secret is stored as an arbitrary secret, meaning the IAM engine will not dynamically create the key or manage rotation of it)
-- Configures the secret manager instance with the IAM engine using the ServiceID apikey
+- Optionally assigning a given user a Secrets Manager "Manager" role (disabled by default - not recommended for production - users should be assigned roles using access groups instead of direct role access)."
+- Creates a new Service ID
+- Assigns the new Service ID "Editor" role access for "iam-groups"
+- Assigns the new Service ID "Operator" role access for "iam-identity". If user set the input variable add_service_id_creator_role to true, this module will also add "Service ID creator" role access for "iam-identity". It is recommended to set it true if the service ID creation is disabled in the IAM settings.
+- Creates a new API key for the Service ID
+- Optionally creates a new Secret Group (an existing group can be pass in otherwise)
+- Creates a new arbitrary secret in the Secret Group with the generated Service ID API key value (NOTE: This Service ID API key secret is stored as an arbitrary secret, meaning the IAM engine will not dynamically create the key or manage rotation of it)
+- Configures the Secret Manager instance with the IAM credentials engine using the Service ID API key.
 
 <!-- Below content is automatically populated via pre-commit hook -->
 <!-- BEGIN OVERVIEW HOOK -->
 ## Overview
 * [terraform-ibm-secrets-manager-iam-engine](#terraform-ibm-secrets-manager-iam-engine)
 * [Examples](./examples)
-    * [Default example](./examples/default)
+    * [Basic example](./examples/basic)
 * [Contributing](#contributing)
 <!-- END OVERVIEW HOOK -->
 
