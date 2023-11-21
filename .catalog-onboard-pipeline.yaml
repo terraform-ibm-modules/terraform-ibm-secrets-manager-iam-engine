@@ -1,0 +1,10 @@
+---
+apiVersion: v1
+offerings:
+  - name: terraform-ibm-secrets-manager-iam-engine
+    kind: module
+    catalog_id: 7df1e4ca-d54c-4fd0-82ce-3d13247308cd
+    offering_id: 411db08f-f4fa-4b60-89e5-d9f094c5ab42
+    examples:
+      - name: basic
+        mark_ready: true
