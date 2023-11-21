@@ -10,7 +10,7 @@ import (
 
 // Use existing resource group
 const resourceGroup = "geretain-test-sm-iam-eng"
-const defaultExampleTerraformDir = "examples/default"
+const defaultExampleTerraformDir = "examples/basic"
 
 func TestRunDefaultExample(t *testing.T) {
 	t.Parallel()
