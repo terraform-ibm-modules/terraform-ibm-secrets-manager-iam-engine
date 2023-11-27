@@ -65,7 +65,7 @@ locals {
 module "secrets_manager_group_acct" {
   count                    = (var.existing_secret_group_id == null) ? 1 : 0
   source                   = "terraform-ibm-modules/secrets-manager-secret-group/ibm"
-  version                  = "1.1.0"
+  version                  = "1.1.3"
   region                   = var.region
   secrets_manager_guid     = var.secrets_manager_guid
   secret_group_name        = var.new_secret_group_name
