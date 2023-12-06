@@ -57,7 +57,7 @@ moved {
 
 # Variable to extract API key value
 locals {
-  apikey        = lookup(one(ibm_iam_service_api_key.iam_serviceid_apikey[*]), "apikey")
+  apikey        = one(ibm_iam_service_api_key.iam_serviceid_apikey[*])["apikey"]
   apikey_output = var.display_iam_secret_generator_apikey == true ? nonsensitive(local.apikey) : "not-displayed"
 }
 
