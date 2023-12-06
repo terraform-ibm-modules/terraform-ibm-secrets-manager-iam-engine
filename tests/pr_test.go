@@ -12,16 +12,21 @@ import (
 const resourceGroup = "geretain-test-sm-iam-eng"
 const defaultExampleTerraformDir = "examples/basic"
 
-func TestRunDefaultExample(t *testing.T) {
-	t.Parallel()
-
+func setupOptions(t *testing.T, prefix string, dir string) *testhelper.TestOptions {
 	options := testhelper.TestOptionsDefaultWithVars(&testhelper.TestOptions{
 		Testing:            t,
-		TerraformDir:       defaultExampleTerraformDir,
-		Prefix:             "sm-iam-eng",
+		TerraformDir:       dir,
+		Prefix:             prefix,
 		ResourceGroup:      resourceGroup,
 		BestRegionYAMLPath: "../common-dev-assets/common-go-assets/cloudinfo-region-secmgr-prefs.yaml",
 	})
+	return options
+}
+
+func TestRunDefaultExample(t *testing.T) {
+	t.Parallel()
+
+	options := setupOptions(t, "sm-iam-eng", defaultExampleTerraformDir)
 
 	output, err := options.RunTestConsistency()
 	assert.Nil(t, err, "This should not have errored")
@@ -31,13 +36,7 @@ func TestRunDefaultExample(t *testing.T) {
 func TestRunUpgradeExample(t *testing.T) {
 	t.Parallel()
 
-	options := testhelper.TestOptionsDefaultWithVars(&testhelper.TestOptions{
-		Testing:            t,
-		TerraformDir:       defaultExampleTerraformDir,
-		Prefix:             "sm-iam-eng-upg",
-		ResourceGroup:      resourceGroup,
-		BestRegionYAMLPath: "../common-dev-assets/common-go-assets/cloudinfo-region-secmgr-prefs.yaml",
-	})
+	options := setupOptions(t, "sm-iam-eng-upg", defaultExampleTerraformDir)
 
 	output, err := options.RunTestUpgrade()
 	if !options.UpgradeTestSkipped {
