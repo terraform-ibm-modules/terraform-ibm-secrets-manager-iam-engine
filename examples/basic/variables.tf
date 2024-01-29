@@ -31,9 +31,3 @@ variable "resource_tags" {
   description = "Optional list of tags to be added to created resources"
   default     = []
 }
-
-variable "sm_service_plan" {
-  type        = string
-  description = "Type of service plan to use to provision Secrets Manager if not using an existing one."
-  default     = "trial"
-}
