@@ -3,7 +3,7 @@
 ##############################################################################
 
 output "secrets_manager_guid" {
-  value       = ibm_resource_instance.secrets_manager.guid
+  value       = module.secrets_manager.secrets_manager_guid
   description = "GUID of Secrets Manager instance."
 }
 
