@@ -35,14 +35,13 @@ The module supports the following operations:
 ```hcl
 provider "ibm" {
   ibmcloud_api_key = "XXXXXXXXXXXXX"
-  region           = "us-south"
+  region           = "us-south" # secrets manager instance region
 }
 
 module "iam_secrets_engine" {
   source               = "terraform-ibm-modules/secrets-manager-iam-engine/ibm"
   version              = "X.X.X"  # Replace "X.X.X" with a release version to lock into a specific release
-  resource_group_id    = "xxXXxxXXxXxXXXXxxXxxxXXXXxXXXXX"
-  region               = "us-south"
+  region               = "us-south"  # secrets manager instance region
   iam_engine_name      = "iam-engine"
   secrets_manager_guid = "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
 }
