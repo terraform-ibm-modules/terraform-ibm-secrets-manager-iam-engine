@@ -24,4 +24,5 @@ module "iam_engine" {
   region               = var.region
   secrets_manager_guid = module.secrets_manager.secrets_manager_guid
   iam_engine_name      = "generated_iam_engine"
+  service_endpoints    = "private"
 }
