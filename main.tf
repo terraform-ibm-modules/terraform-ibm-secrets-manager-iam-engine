@@ -89,6 +89,7 @@ module "secrets_manager_secret_iam_secret_generator_apikey" {
   secret_group_id         = local.secret_group_id
   secret_labels           = var.iam_secret_generator_apikey_secret_labels
   secret_type             = "arbitrary"
+  service_endpoints       = var.service_endpoints
 }
 
 # Create IAM Engine
