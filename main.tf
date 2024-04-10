@@ -30,7 +30,7 @@ resource "ibm_iam_service_policy" "iam_secret_generator_policy1" {
   }
 }
 
-# create policy for iam identity service
+# create policy for iam identity service.
 locals {
   iam_identity_roles = var.add_service_id_creator_role ? ["Operator", "Service ID creator"] : ["Operator"]
 }
