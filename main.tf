@@ -65,11 +65,12 @@ locals {
 module "secrets_manager_group_acct" {
   count                    = (var.existing_secret_group_id == null) ? 1 : 0
   source                   = "terraform-ibm-modules/secrets-manager-secret-group/ibm"
-  version                  = "1.1.4"
+  version                  = "1.2.0"
   region                   = var.region
   secrets_manager_guid     = var.secrets_manager_guid
   secret_group_name        = var.new_secret_group_name
   secret_group_description = "Secret-Group for storing account credentials"
+  endpoint_type            = var.endpoint_type
 }
 
 # Determine the secret group ID
@@ -80,7 +81,7 @@ locals {
 # Create secrets-manager secret
 module "secrets_manager_secret_iam_secret_generator_apikey" {
   source                  = "terraform-ibm-modules/secrets-manager-secret/ibm"
-  version                 = "1.2.0"
+  version                 = "1.3.0"
   region                  = var.region
   secrets_manager_guid    = var.secrets_manager_guid
   secret_name             = var.iam_secret_generator_apikey_secret_name
@@ -89,14 +90,14 @@ module "secrets_manager_secret_iam_secret_generator_apikey" {
   secret_group_id         = local.secret_group_id
   secret_labels           = var.iam_secret_generator_apikey_secret_labels
   secret_type             = "arbitrary"
-  service_endpoints       = var.service_endpoints
+  endpoint_type           = var.endpoint_type
 }
 
 # Create IAM Engine
 resource "ibm_sm_iam_credentials_configuration" "sm_iam_engine_configuration" {
   instance_id   = var.secrets_manager_guid
   region        = var.region
-  endpoint_type = var.service_endpoints
+  endpoint_type = var.endpoint_type
   name          = var.iam_engine_name
   api_key       = local.apikey
   depends_on = [
