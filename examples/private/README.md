@@ -1,6 +1,6 @@
-# Basic example
+# Private only example
 
-A simple example that shows how to provision the IBM Cloud Secrets Manager IAM credentials engine.
+An example that shows how to provision the IBM Cloud Secrets Manager IAM credentials engine using private only endpoints.
 
 The following resources are provisioned by this example:
 

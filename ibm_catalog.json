@@ -61,6 +61,11 @@
               }
             ]
           }
+        },
+        {
+          "label": "Private Only",
+          "name": "private",
+          "working_directory": "examples/private"
         }
       ]
     }

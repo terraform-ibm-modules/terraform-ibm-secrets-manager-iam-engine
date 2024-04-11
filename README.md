@@ -25,7 +25,7 @@ The module supports the following operations:
 * [terraform-ibm-secrets-manager-iam-engine](#terraform-ibm-secrets-manager-iam-engine)
 * [Examples](./examples)
     * [Basic example](./examples/basic)
-    * [Basic example](./examples/private)
+    * [Private only example](./examples/private)
 * [Contributing](#contributing)
 <!-- END OVERVIEW HOOK -->
 
