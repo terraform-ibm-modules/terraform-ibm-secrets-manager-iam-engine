@@ -57,6 +57,23 @@
                   "url": "https://raw.githubusercontent.com/terraform-ibm-modules/documentation/main/icons/ModuleExampleDiagram.svg",
                   "type": "image/svg+xml"
                 },
+                "description": "A simple example to set up a Secret Manager instance and configure the IAM credentials engine privately."
+              }
+            ]
+          }
+        },
+        {
+          "label": "Private",
+          "name": "private",
+          "working_directory": "examples/private",
+          "architecture": {
+            "diagrams": [
+              {
+                "diagram": {
+                  "caption": "Private example",
+                  "url": "https://raw.githubusercontent.com/terraform-ibm-modules/documentation/main/icons/ModuleExampleDiagram.svg",
+                  "type": "image/svg+xml"
+                },
                 "description": "A simple example to set up a Secret Manager instance and configure the IAM credentials engine."
               }
             ]

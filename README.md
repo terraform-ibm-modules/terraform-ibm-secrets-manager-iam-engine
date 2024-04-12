@@ -25,6 +25,7 @@ The module supports the following operations:
 * [terraform-ibm-secrets-manager-iam-engine](#terraform-ibm-secrets-manager-iam-engine)
 * [Examples](./examples)
     * [Basic example](./examples/basic)
+    * [Private only example](./examples/private)
 * [Contributing](#contributing)
 <!-- END OVERVIEW HOOK -->
 
@@ -95,7 +96,7 @@ You need the following permissions to run this module.
 |------|-------------|------|---------|:--------:|
 | <a name="input_add_service_id_creator_role"></a> [add\_service\_id\_creator\_role](#input\_add\_service\_id\_creator\_role) | Optionally, add service id creator role to the generated service id. This is only required if the creation of service IDs in your IAM settings is disabled. | `bool` | `false` | no |
 | <a name="input_display_iam_secret_generator_apikey"></a> [display\_iam\_secret\_generator\_apikey](#input\_display\_iam\_secret\_generator\_apikey) | Set to true to display the iam\_secret\_generator\_apikey serviceID API Key in output. Should only be used by account admins. | `bool` | `false` | no |
-| <a name="input_endpoint_type"></a> [endpoint\_type](#input\_endpoint\_type) | The service endpoint type to communicate with the provided secrets manager instance. Possible values are `public` or `private` | `string` | `"public"` | no |
+| <a name="input_endpoint_type"></a> [endpoint\_type](#input\_endpoint\_type) | The endpoint type to communicate with the provided secrets manager instance. Possible values are `public` or `private` | `string` | `"public"` | no |
 | <a name="input_existing_secret_group_id"></a> [existing\_secret\_group\_id](#input\_existing\_secret\_group\_id) | The ID of an existing secret group that the Service ID (used to configure IAM secret engine) apikey secret will be added to. If null, a new group is created using the value in var.new\_secret\_group\_name. | `string` | `null` | no |
 | <a name="input_iam_engine_name"></a> [iam\_engine\_name](#input\_iam\_engine\_name) | The name of the IAM Engine to create. | `string` | n/a | yes |
 | <a name="input_iam_secret_generator_apikey_description"></a> [iam\_secret\_generator\_apikey\_description](#input\_iam\_secret\_generator\_apikey\_description) | Description of ServiceID API Key to be created for Secrets Manager IAM Secret engine | `string` | `"ServiceID API Key to be created for Secrets Manager IAM Secret engine"` | no |

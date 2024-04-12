@@ -8,3 +8,5 @@ offerings:
     examples:
       - name: basic
         mark_ready: true
+      - name: private
+        mark_ready: true
