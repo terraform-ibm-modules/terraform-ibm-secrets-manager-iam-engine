@@ -9,12 +9,12 @@ module "resource_group" {
 # Create Secrets Manager Instance
 module "secrets_manager" {
   source               = "terraform-ibm-modules/secrets-manager/ibm"
-  version              = "1.2.1"
+  version              = "1.10.0"
   resource_group_id    = module.resource_group.resource_group_id
   region               = var.region
   secrets_manager_name = "${var.prefix}-secrets-manager"
   sm_service_plan      = "trial"
-  service_endpoints    = "private"
+  allowed_network      = "private-only"
   sm_tags              = var.resource_tags
 }
 

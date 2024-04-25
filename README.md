@@ -71,7 +71,7 @@ You need the following permissions to run this module.
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3.0, <1.7.0 |
-| <a name="requirement_ibm"></a> [ibm](#requirement\_ibm) | >= 1.51.0 |
+| <a name="requirement_ibm"></a> [ibm](#requirement\_ibm) | >= 1.62.0 |
 
 ### Modules
 
