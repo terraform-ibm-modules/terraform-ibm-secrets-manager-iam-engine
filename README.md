@@ -13,7 +13,7 @@ The module supports the following operations:
 
 - Creates a new Service ID.
 - Assigns the new Service ID "Editor" role access for `iam-groups`.
-- Assigns the new Service ID "Operator" role access for `iam-identity`. If user set the input variable add_service_id_creator_role to true, this module will also add "Service ID creator" role access for `iam-identity`. It is recommended to set it true if the service ID creation is disabled in the IAM settings.
+- Assigns the new Service ID "Operator" and "Service ID creator" role access for `iam-identity`.
 - Creates a new API key for the Service ID.
 - Optionally creates a secrets group, if an existing one is not passed in.
 - Creates a new arbitrary secret in the Secret Group with the generated Service ID API key value. Because it is an arbitrary secret, the IAM engine does not create the key or manage its rotation.
@@ -94,7 +94,6 @@ You need the following permissions to run this module.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_add_service_id_creator_role"></a> [add\_service\_id\_creator\_role](#input\_add\_service\_id\_creator\_role) | Optionally, add service id creator role to the generated service id. This is only required if the creation of service IDs in your IAM settings is disabled. | `bool` | `false` | no |
 | <a name="input_display_iam_secret_generator_apikey"></a> [display\_iam\_secret\_generator\_apikey](#input\_display\_iam\_secret\_generator\_apikey) | Set to true to display the iam\_secret\_generator\_apikey serviceID API Key in output. Should only be used by account admins. | `bool` | `false` | no |
 | <a name="input_endpoint_type"></a> [endpoint\_type](#input\_endpoint\_type) | The endpoint type to communicate with the provided secrets manager instance. Possible values are `public` or `private` | `string` | `"public"` | no |
 | <a name="input_existing_secret_group_id"></a> [existing\_secret\_group\_id](#input\_existing\_secret\_group\_id) | The ID of an existing secret group that the Service ID (used to configure IAM secret engine) apikey secret will be added to. If null, a new group is created using the value in var.new\_secret\_group\_name. | `string` | `null` | no |

@@ -83,10 +83,4 @@ variable "iam_engine_name" {
   description = "The name of the IAM Engine to create."
 }
 
-variable "add_service_id_creator_role" {
-  type        = bool
-  description = "Optionally, add service id creator role to the generated service id. This is only required if the creation of service IDs in your IAM settings is disabled."
-  default     = false
-}
-
 ##############################################################################
