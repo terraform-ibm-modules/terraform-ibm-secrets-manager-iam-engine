@@ -16,6 +16,7 @@ module "secrets_manager" {
   sm_service_plan      = "trial"
   allowed_network      = "private-only"
   sm_tags              = var.resource_tags
+  endpoint_type        = "private"
 }
 
 # Configure instance with IAM engine
