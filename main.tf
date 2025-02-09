@@ -81,7 +81,7 @@ locals {
 # Create secrets-manager secret
 module "secrets_manager_secret_iam_secret_generator_apikey" {
   source                  = "terraform-ibm-modules/secrets-manager-secret/ibm"
-  version                 = "1.4.0"
+  version                 = "1.6.0"
   region                  = var.region
   secrets_manager_guid    = var.secrets_manager_guid
   secret_name             = var.iam_secret_generator_apikey_secret_name
