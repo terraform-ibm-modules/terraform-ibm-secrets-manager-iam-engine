@@ -77,7 +77,7 @@ You need the following permissions to run this module.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_secrets_manager_group_acct"></a> [secrets\_manager\_group\_acct](#module\_secrets\_manager\_group\_acct) | terraform-ibm-modules/secrets-manager-secret-group/ibm | 1.2.3 |
+| <a name="module_secrets_manager_group_acct"></a> [secrets\_manager\_group\_acct](#module\_secrets\_manager\_group\_acct) | terraform-ibm-modules/secrets-manager-secret-group/ibm | 1.3.2 |
 | <a name="module_secrets_manager_secret_iam_secret_generator_apikey"></a> [secrets\_manager\_secret\_iam\_secret\_generator\_apikey](#module\_secrets\_manager\_secret\_iam\_secret\_generator\_apikey) | terraform-ibm-modules/secrets-manager-secret/ibm | 1.7.0 |
 
 ### Resources
