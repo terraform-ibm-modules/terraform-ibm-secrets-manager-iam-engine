@@ -5,7 +5,6 @@
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
-[![Catalog release](https://img.shields.io/badge/release-IBM%20Cloud%20Catalog-3662FF?logo=ibm)](https://cloud.ibm.com/catalog/modules/terraform-ibm-secrets-manager-iam-engine-411db08f-f4fa-4b60-89e5-d9f094c5ab42-global)
 
 Use this module to configure an IBM Secrets Manager [IAM credentials engine]((https://cloud.ibm.com/docs/secrets-manager?topic=secrets-manager-configure-iam-engine)) for an existing IBM Secrets Manager instance.
 
