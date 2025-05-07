@@ -5,7 +5,6 @@
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
-[![Catalog release](https://img.shields.io/badge/release-IBM%20Cloud%20Catalog-3662FF?logo=ibm)](https://cloud.ibm.com/catalog/modules/terraform-ibm-secrets-manager-iam-engine-411db08f-f4fa-4b60-89e5-d9f094c5ab42-global)
 
 ***
 This module is deprecated. Its functionality has been moved into the main [Secrets Manager module and DA](https://github.com/terraform-ibm-modules/terraform-ibm-secrets-manager) by utilizing s2s IAM authorization policies. This functionality is controlled with the `skip_iam_authorization_policy` variable.
