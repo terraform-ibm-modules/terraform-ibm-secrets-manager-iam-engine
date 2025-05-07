@@ -1,14 +1,14 @@
 # Secrets Manager IAM engine module
 
+---
+🕸️ Archived: This repo is no longer maintained and is archived. Its functionality has been moved into the main [Secrets Manager module and DA](https://github.com/terraform-ibm-modules/terraform-ibm-secrets-manager) by utilizing s2s IAM authorization policies. This functionality is controlled with the `skip_iam_authorization_policy` variable.
+---
+
 [![Graduated (Supported)](https://img.shields.io/badge/Status-Graduated%20(Supported)-brightgreen)](https://terraform-ibm-modules.github.io/documentation/#/badge-status)
 [![latest release](https://img.shields.io/github/v/release/terraform-ibm-modules/terraform-ibm-secrets-manager-iam-engine?logo=GitHub&sort=semver)](https://github.com/terraform-ibm-modules/terraform-ibm-secrets-manager-iam-engine/releases/latest)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
-
-***
-This module is deprecated. Its functionality has been moved into the main [Secrets Manager module and DA](https://github.com/terraform-ibm-modules/terraform-ibm-secrets-manager) by utilizing s2s IAM authorization policies. This functionality is controlled with the `skip_iam_authorization_policy` variable.
-***
 
 Use this module to configure an IBM Secrets Manager [IAM credentials engine]((https://cloud.ibm.com/docs/secrets-manager?topic=secrets-manager-configure-iam-engine)) for an existing IBM Secrets Manager instance.
 
